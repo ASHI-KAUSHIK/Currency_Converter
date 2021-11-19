@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background: linear-gradient(45deg, rgb(146, 146, 250),rgb(123, 248, 123),white);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    min-height: 100vh;
+    
+}
+
+.container .products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.container .products .product{
+    flex: 1 1 300px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: 24px;
+}
+
+.container .products .product h3{
+    font-size: 22px;
+    text-shadow: 1px 1px 2px blueviolet,0 0 1em green,0 0 0.2em white;
+}
+
+.container .products .product .amount{
+    padding: 10px 0;
+    font-weight: bolder;
+}
+
+.container .products .product .amount .dollar{
+    font-size: 25px;
+}
+
+.container .products .product .amount .price{
+    font-size: 35px;
+}
+
+.container .products .product .btn{
+    display: inline-block;
+    border-radius:50px;
+    background-color:black;
+    color:white;
+    transition: .2s ease-out;
+    margin:12px;
+    padding: 15px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.container .products .product .btn:hover{
+    opacity: 0.8;
+    letter-spacing: 3px;
+}
+
+.container .currency-toggler{
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.container .currency-toggler span{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.container .currency-toggler .toggler{
+    margin: 0 10px;
+    height: 50px;
+    width: 150px;
+    border-radius: 50px;
+    background-color: white;
+    position: relative;
+    cursor: pointer;
+}
+
+.container .currency-toggler .toggler::before{
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    height: 40px;
+    width: 40px;
+    background:black;
+    border-radius: 50%;
+    transition: .2s ease-out;
+}
+
+.container .currency-toggler .toggler.active::before{
+    left: calc(100% - 47px);
+}
